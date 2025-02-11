@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Scooter - Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #a1a1a1;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #a1a1a1;
+        }
+        tr:hover {
+            background-color: #a1a1a1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Urban Scooter</h1>
+        <a href="index.html" class="back-button">← Volver al Portafolio</a>
+    </header>
+
+    <section>
+        <h2>Descripción del Proyecto</h2>
+        <p>Este proyecto consistió en realizar pruebas para garantizar el correcto funcionamiento de un aplicativo para solicitar la renta de scooters. Las actividades principales fueron:</p>
+        <ul>
+            <li>Diseño y ejecución de casos de prueba basados en requisitos del sistema.</li>
+            <li>Pruebas en navegadores (Opera y Chrome) y en móviles mediante emuladores de Android Studio.</li>
+            <li>Validación de datos y cambios de estado en la base de datos utilizando PostgreSQL.</li>
+            <li>Envío y validación de solicitudes a la API mediante Postman.</li>
+        </ul>
+    </section>
+
+    <!-- Tabla 1: Lista de Comprobación Aplicación Web -->
+    <section>
+        <h2>Lista de Comprobación - Aplicación Web</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Descripción</th>
+                    <th>Estado: Chrome v125.0.6422.142 (Build oficial) (64 bits) 1280x720p</th>
+                    <th>Estado: Opera One v110.0.5130.66 1280x720p</th>
+                    <th>Estado: Chrome v125.0.6422.142 (Build oficial) (64 bits) 1920x1080p</th>
+                    <th>Estado: Opera One v110.0.5130.66 1920x1080p</th>
+                    <th>Enlace a informe de error</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>El logo de Urban Scooter se encuentra en la esquina superior izquierda.</td>
+                    <td>Aprobado</td>
+                    <td>Aprobado</td>
+                    <td>Aprobado</td>
+                    <td>Aprobado</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Hacer clic en el logo de Urban Scooter te direcciona a la página principal.</td>
+                    <td>Aprobado</td>
+                    <td>Aprobado</td>
+                    <td>Aprobado</td>
+                    <td>Aprobado</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>El texto 'Plataforma interactiva' se encuentra en la esquina superior izquierda junto al logo Urban Scooter (lado derecho)</td>
+                    <td>Aprobado</td>
+                    <td>Aprobado</td>
+                    <td>Aprobado</td>
+                    <td>Aprobado</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>El botón 'Pedir' se encuentra en la esquina superior derecha de la pantalla</td>
+                    <td>Aprobado</td>
+                    <td>Aprobado</td>
+                    <td>Aprobado</td>
+                    <td>Aprobado</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Al ingresar el número de pedido correcto en el campo 'Número de pedido' y presionar Enter te direcciona a la pantalla 'Estado del pedido'</td>
+                    <td>No Aprobado</td>
+                    <td>No Aprobado</td>
+                    <td>No Aprobado</td>
+                    <td>No Aprobado</td>
+                    <td>https://tripletencoh09.atlassian.net/browse/YS9-21</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="https://docs.google.com/spreadsheets/d/1exhOk1GQWk0tjCJG5dR7AmW1rQ0VW6TX/edit?usp=sharing&ouid=117326136809177059170&rtpof=true&sd=true" target="_blank">Acceder a Lista completa</a>
+    </section>
+
+    <!-- Tabla 2: Validación de Datos de Entrada -->
+    <section>
+        <h2>Validación de Datos de Entrada</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Campo</th>
+                    <th>Nombre de la clase</th>
+                    <th>Límites</th>
+                    <th>Datos de prueba dentro de la clase (contenido del campo)</th>
+                    <th>Datos de prueba en los límites (contenido del campo)</th>
+                    <th>Clarificación y optimización</th>
+                    <th>Estado: CHROME Versión 125.0.6422.142 (Build oficial) (64 bits) 1280x720p</th>
+                    <th>Estado: Opera One(versión: 110.0.5130.66) 1280x720p</th>
+                    <th>Enlace al informe de errores</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3">Ingreso de datos</td>
+                    <td rowspan="3">Nombre</td>
+                    <td>La longitud del texto es de 1 caracter o menos</td>
+                    <td>1</td>
+                    <td>0 -- vacío</td>
+                    <td>1 -- 'a'<br>
+                        2 -- ' a'</td>
+                    <td>-Con el limite 2 validamos también el caso para espacio al inicio </td>
+                    <td>APROBADO</td>
+                    <td>APROBADO</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>La longitud del texto es de 2 a 15 caracteres</td>
+                    <td>2, 15</td>
+                    <td>10 -- "Morty-Adam"</td>
+                    <td>1 -- 'a'<br>
+                        2 -- 'a '<br>
+                        3 -- 'a b'<br>
+                        14 -- '-Morty-Adam-Sm'<br>
+                        15 -- '-MortyAdamSmith'<br>
+                        16 --  'MortyAdam Smith/'</td>
+                    <td>-Con el limite 2 validamos también el caso para espacio al final.<br>
+                        -Con el limite 3 validamos tambien el caso para espacio dentro.<br>
+                        -Con el limite 14 validamos también el caso para dos o mas guiones.<br>
+                        -Con el limite 15 validamos también el caso para guión al inicio.<br>
+                        -Con el limite 16 validamos tambien el caso para caracteres especiales.</td>
+                    <td>APROBADO</td>
+                    <td>APROBADO</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>La longitud del texto es de 16 caracteres o más</td>
+                    <td>16</td>
+                    <td>20 -- 'Rick Sanchez y Morty'</td>
+                    <td>15 -- 'MortyAdamSmith-'<br> 
+                        16 -- 'Morty-AdamSmith '<br> 
+                        17 -- 'Morty Adam Smith-'</td>
+                    <td>-Con el limite 15 validamos también el caso para guión al final.<br> 
+                        -Con el limite 16 validamos tambien el caso para guión dentro.</td>
+                    <td>APROBADO</td>
+                    <td>APROBADO</td>
+                    <td>N/A</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="https://docs.google.com/spreadsheets/d/1exhOk1GQWk0tjCJG5dR7AmW1rQ0VW6TX/edit?usp=sharing&ouid=117326136809177059170&rtpof=true&sd=true" target="_blank">Acceder a Tabla completa</a>
+    </section>
+
+    <!-- Tabla 3: Casos de Prueba -->
+    <section>
+        <h2>Casos de Prueba - Aplicación móvil</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Funcionalidad</th>
+                    <th>ID</th>
+                    <th>Nombre del caso de prueba</th>
+                    <th>Precondiciones</th>
+                    <th>Número de pasos</th>
+                    <th>Descripción de los pasos</th>
+                    <th>Resultado esperado</th>
+                    <th>Versión</th>
+                    <th>Captura de pantalla (si es necesario)</th>
+                    <th>Estado</th>
+                    <th>Enlace al informe de errores</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3">Notificación</td>
+                    <td rowspan="3">Mob1</td>
+                    <td rowspan="3">Notificación para completar un pedido aparece cuando quedan 2 horas para completar el pedido</td>
+                    <td rowspan="3">1. El usuario o usuaria ha realizado un pedido.<br>
+                        2. Abre la aplicación móvil.<br>
+                        3. Inicia sesión como un repartidor o repartidora que no tiene pedidos.<br>
+                        4. Acepta un pedido</td>
+                    <td>1</td>
+                    <td>Verifica el estado del pedido (Fecha en la que se requiere el pedido)</td>
+                    <td rowspan="3">Verifica el estado del pedido (Fecha en la que se requiere el pedido)</td>
+                    <td rowspan="3">Android 13.0 x86_64</td>
+                    <td rowspan="3">N/A</td>
+                    <td rowspan="3">NO APROBADO</td>
+                    <td rowspan="3">https://tripletencoh09.atlassian.net/browse/JH9-13</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>En caso de ser necesario dirigete a la base de datos para cambiar...</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Una vez actualizada la base de datos dirigete a la aplicación móvil...</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Sin Internet</td>
+                    <td rowspan="2">Mob6</td>
+                    <td rowspan="2">Aparece una notificación cuando Seleccionas el campo login</td>
+                    <td rowspan="2">1. Abrir la aplicación</td>
+                    <td>1</td>
+                    <td>Desactiva los datos móviles o el wifi</td>
+                    <td rowspan="2">1. Aparece una ventana emergente con el mensaje:
+                        'Sin acceso a internet'<br>
+                        2 Aparece una ventana emergente con el botón 'Aceptar'</td>
+                    <td rowspan="2">Android 13.0 x86_64</td>
+                    <td rowspan="2">N/A</td>
+                    <td rowspan="2">NO APROBADO</td>
+                    <td rowspan="2">https://tripletencoh09.atlassian.net/browse/JH9-20</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>https://tripletencoh09.atlassian.net/browse/JH9-20</td>
+                </tr>       
+            </tbody>
+        </table>
+        <a href="https://docs.google.com/spreadsheets/d/1exhOk1GQWk0tjCJG5dR7AmW1rQ0VW6TX/edit?usp=sharing&ouid=117326136809177059170&rtpof=true&sd=true" target="_blank">Acceder a Tabla completa</a>
+    </section>
+
+    <!-- Tabla 4: Lista de Comprobación API -->
+    <section>
+        <h2>Lista de Comprobación - API</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Solicitud</th>
+                    <th>Descripción</th>
+                    <th>Resultado esperado</th>
+                    <th>Estado</th>
+                    <th>Enlace a informe de error</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>POST (/api/v1/courier)</td>
+                    <td>El usuario puede registrarse</td>
+                    <td>Status: 201 Created</td>
+                    <td>APROBADO</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>DELETE (/api/v1/courier/:id)</td>
+                    <td>Se puede borrar un repartidor del sistema</td>
+                    <td>HTTP/1.1 200 OK<br>
+                        {<br>
+                           ok: true<br>
+                        }</td>
+                    <td>APROBADO</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>GET (/api/v1/orders/track)</td>
+                    <td>Solicitud sin numero</td>
+                    <td>HTTP/1.1 400 Bad Request<br>
+                        {<br>
+                           'message': 'No hay datos suficientes para la búsqueda'<br>
+                        }</td>
+                    <td>APROBADO</td>
+                    <td>N/A</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="https://docs.google.com/spreadsheets/d/1exhOk1GQWk0tjCJG5dR7AmW1rQ0VW6TX/edit?usp=sharing&ouid=117326136809177059170&rtpof=true&sd=true" target="_blank">Acceder a Lista completa</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ismael Santamaría López | Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

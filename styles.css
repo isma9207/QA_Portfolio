@@ -1,0 +1,238 @@
+/* General */
+* {
+    box-sizing: border-box; /* Asegura que el padding y el borde no afecten al tamaño */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #83878c, #767676); /* Gradiente de azul a gris */
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #011f3f;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header h2 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+header p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+
+/* Secciones generales */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.309); /* Color blanco semi-transparente */
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    backdrop-filter: blur(5px); /* Efecto difuminado opcional */
+}
+
+section h2 {
+    font-size: 1.8rem; /* Opcional: ajustar tamaño del título */
+    margin-bottom: 0.5rem;
+}
+
+section p {
+    font-size: 1rem; /* Ajustar el tamaño del texto */
+    margin-bottom: 0.5rem;
+    line-height: 1.4; /* Espaciado de líneas más compacto */
+}
+
+/* Colores específicos para cada sección */
+.about-section {
+    background-color: #9f9f9f; /* Color azul claro */
+}
+
+.skills-section {
+    background-color: #cccccc; /* Color azul muy claro */
+}
+
+.projects-section {
+    background-color: #9f9f9f; /* Color rosa claro */
+}
+
+.contact-section {
+    background-color: #cccccc; /* Color naranja suave */
+}
+
+/* Skills */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Fuerza siempre 2 columnas */
+    gap: 0.005rem 1rem; /* Espaciado entre elementos */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 300px; /* Ajuste del ancho */
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skill img {
+    width: 150px;  /* Logos más grandes */
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 0.005rem;
+}
+
+
+/* Projects */
+.project {
+    background-color: #cccccc6d;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Asegura que el contenedor no exceda el ancho disponible */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+.project h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.project p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.project a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.project a:hover {
+    background-color: #0056b3;
+}
+
+/* Formulario de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    gap: 1rem;
+}
+
+form label {
+    font-size: 1rem;
+    color: #333;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+footer .social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo de los iconos de contacto */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.contact-icons .social-icon {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-icons .social-icon:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Tamaño y espaciado de los iconos */
+.contact-icons .social-icon i {
+    margin-right: 0.5rem;
+}
+
+/* Agregar animación */
+.contact-icons .social-icon:hover i {
+    transform: scale(1.1);
+}

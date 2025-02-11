@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Blaze - Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #a1a1a1;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #a1a1a1;
+        }
+        tr:hover {
+            background-color: #a1a1a1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Demo Blaze</h1>
+        <a href="index.html" class="back-button">← Volver al Portafolio</a>
+    </header>
+
+    <section>
+        <h2>Descripción del Proyecto</h2>
+        <p>Demo Blaze es un sitio web que simula una tienda virtual, destinada a la práctica para probar habilidades de automatización de pruebas UI y flujo de usuario.
+            Hoy en día existen un sin fin de e-commerce en la red donde es posible adquirir diversos artículos para el día a día, por lo que, utilizar un software así resulta muy común entre la sociedad actual y más aún, que cualquier negocio de ventas, por muy pequeño que sea, puede vender sus productos a través de internet.
+            Dado que no se cuenta con información técnica sobre el funcionamiento de Demo Blaze como lo son los requisitos del programa en si, las pruebas realizadas para este sitio fueron en su mayoría pruebas exploratorias. 
+            Se utilizaron herramientas como listas de comprobación para detectar la funcionalidad en el header en la página principal, navegando a través de las diferentes páginas a las que dirige cada uno de los botones, se verificó el funcionamiento de las ventanas emergentes, sus diferentes botones, la funcionalidad de los formularios, creación de usuarios e inicio de sesión.
+            Se diseñaron y documentaron casos de prueba que son indispensables en el uso de una tienda virtual, como son: 
+
+            navegación por el catálogo,
+            verificar la información de un artículo,
+            añadir productos al carrito,
+            comprobación de productos y precios en el carrito,
+            proceso de compra,
+            validación de mensajes de error.
+       
+            Por último se crea un script para realizar pruebas automatizadas del carrito de compra utilizando Selenium con el lenguaje de programación Python.</p>
+        <ul>
+            <li><a href="https://docs.google.com/spreadsheets/d/1DJ6mUc-vRAaVMGBA8V89Iu7gIrdU9Hd14fKofZTVKIs/edit?usp=sharing">Listas de comprobación y casos de prueba</a></li>
+            <li><a href="">Script pruebas automatizadas</a></li>
+            <li><a href="">Reportes de errores</a></li>
+        </ul>
+
+        <a href="https://www.demoblaze.com/" target="_blank">ACCEDER A DEMO BLAZE</a>
+    </section>
+
+    <!-- Sección con una tabla de 4 columnas y 11 filas -->
+    <section>
+        <h2>Lista de Comprobación</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Descripción</th>
+                    <th>Estado: Chrome v131.0.6778.109 64bits</th>
+                    <th>Enlace a informe de error</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>El sitio abre correctamente</td>
+                    <td>Aprobado</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>El botón "Home" funciona correctamente</td>
+                    <td>Aprobado</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>El botón "Contact" funciona correctamente</td>
+                    <td>Aprobado</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>El botón "About us" despliega el video</td>
+                    <td>Aprobado</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>El video de "About us" se reproduce correctamente</td>
+                    <td>Aprobado</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>El botón "Cart" funciona correctamente</td>
+                    <td>Aprobado</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>El botón "Log in" funciona correctamente</td>
+                    <td>Aprobado</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>El botón "Sign up" funciona correctamente</td>
+                    <td>Aprobado</td>
+                    <td>N/A</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="https://docs.google.com/spreadsheets/d/1DJ6mUc-vRAaVMGBA8V89Iu7gIrdU9Hd14fKofZTVKIs/edit?usp=sharing" target="_blank">Acceder a Lista completa</a>
+
+        <h2>Casos de Prueba</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID del caso de prueba</th>
+                    <th>Nombre del caso de prueba</th>
+                    <th>Precondiciones</th>
+                    <th>Número de pasos</th>
+                    <th>Descripción de los pasos</th>
+                    <th>Resultado esperado</th>
+                    <th>Versión</th>
+                    <th>Estado</th>
+                    <th>Enlace al informe de errores</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="5">DB-01</td>
+                    <td rowspan="5">Agregar un elemento de la tienda del sitio Demo Blaze muestra la fotografía del artículo correcto en la ventana del carrito</td>
+                    <td rowspan="5">1, Ingresar al sitio web <a href="https://www.demoblaze.com/">https://www.demoblaze.com/</a></td>
+                    <td>1</td>
+                    <td>Hacer clic en un artículo de la tienda (Samsung galaxy s6)</td>
+                    <td rowspan="5">La fotografía del artículo recién añadido se muestra en la primera columna de la tabla de artículos añadidos al carrito de compra (Pic).</td>
+                    <td rowspan="5">Chrome V131, 0,6778,109 64bits</td>
+                    <td rowspan="5">APROBADO</td>
+                    <td rowspan="5">N/A</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Validar que el precio se encuentre visible en la ventana de información del producto ($360)</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Hacer clic en el botón 'Add to cart' en la ventana de información del producto.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Hacer clic en el botón 'Aceptar' de la ventana emergente (www.demoblaze.com dice)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Hacer clic en el botón 'Cart' en la sección del header del sitio web.</td>
+                </tr>
+                <tr>
+                    <td rowspan="5">DB-02</td>
+                    <td rowspan="5">Agregar un elemento de la tienda del sitio Demo Blaze muestra el precio correcto en la ventana del carrito</td>
+                    <td rowspan="5">1, Ingresar al sitio web <a href="https://www.demoblaze.com/">https://www.demoblaze.com/</a></td>
+                    <td>1</td>
+                    <td>Hacer clic en un artículo de la tienda (Nexus 6)</td>
+                    <td rowspan="5">El precio del artículo recién añadido se muestra en la tercera columna de la tabla de artículos añadidos al carrito de compra (Price).</td>
+                    <td rowspan="5">Chrome V131, 0,6778,109 64bits</td>
+                    <td rowspan="5">APROBADO</td>
+                    <td rowspan="5">N/A</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Validar que el precio se encuentre visible en la ventana de información del producto ($650)</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Hacer clic en el botón 'Add to cart' en la ventana de información del producto.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Hacer clic en el botón 'Aceptar' de la ventana emergente (www.demoblaze.com dice)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Hacer clic en el botón 'Cart' en la sección del header del sitio web.</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="https://docs.google.com/spreadsheets/d/1DJ6mUc-vRAaVMGBA8V89Iu7gIrdU9Hd14fKofZTVKIs/edit?usp=sharing" target="_blank">Acceder a Tabla completa</a>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ismael Santamaría López | Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
