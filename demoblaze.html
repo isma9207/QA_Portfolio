@@ -51,9 +51,9 @@
        
             Por último se crea un script para realizar pruebas automatizadas del carrito de compra utilizando Selenium con el lenguaje de programación Python.</p>
         <ul>
-            <li><a href="https://docs.google.com/spreadsheets/d/1DJ6mUc-vRAaVMGBA8V89Iu7gIrdU9Hd14fKofZTVKIs/edit?usp=sharing">Listas de comprobación y casos de prueba</a></li>
-            <li><a href="https://github.com/isma9207/demoblaze_automation_test">Script pruebas automatizadas</a></li>
-            <li><a href="">Reportes de errores</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/1DJ6mUc-vRAaVMGBA8V89Iu7gIrdU9Hd14fKofZTVKIs/edit?usp=sharing" target="_blank">Listas de comprobación y casos de prueba</a></li>
+            <li><a href="https://github.com/isma9207/demoblaze_automation_test" target="_blank">Script pruebas automatizadas</a></li>
+            <li><a href="bugreports_demoblaze.html">Reportes de errores</a></li>
         </ul>
 
         <a href="https://www.demoblaze.com/" target="_blank">ACCEDER A DEMO BLAZE</a>
@@ -115,10 +115,10 @@
                     <td>N/A</td>
                 </tr>
                 <tr>
-                    <td>8</td>
-                    <td>El botón "Sign up" funciona correctamente</td>
-                    <td>Aprobado</td>
-                    <td>N/A</td>
+                    <td>15</td>
+                    <td>Hacer clic en el botón 'Send Message' con los campos vacíos arroja un error</td>
+                    <td>No Aprobado</td>
+                    <td><a href="pdfs/DB-1.pdf" target="_blank">Ver Reporte DB-1</a></td>
                 </tr>
             </tbody>
         </table>
@@ -141,9 +141,9 @@
             </thead>
             <tbody>
                 <tr>
-                    <td rowspan="5">DB-01</td>
+                    <td rowspan="5">DBZ-01</td>
                     <td rowspan="5">Agregar un elemento de la tienda del sitio Demo Blaze muestra la fotografía del artículo correcto en la ventana del carrito</td>
-                    <td rowspan="5">1, Ingresar al sitio web <a href="https://www.demoblaze.com/">https://www.demoblaze.com/</a></td>
+                    <td rowspan="5">1, Ingresar al sitio web <a href="https://www.demoblaze.com/">demoblaze</a></td>
                     <td>1</td>
                     <td>Hacer clic en un artículo de la tienda (Samsung galaxy s6)</td>
                     <td rowspan="5">La fotografía del artículo recién añadido se muestra en la primera columna de la tabla de artículos añadidos al carrito de compra (Pic).</td>
@@ -168,31 +168,36 @@
                     <td>Hacer clic en el botón 'Cart' en la sección del header del sitio web.</td>
                 </tr>
                 <tr>
-                    <td rowspan="5">DB-02</td>
-                    <td rowspan="5">Agregar un elemento de la tienda del sitio Demo Blaze muestra el precio correcto en la ventana del carrito</td>
-                    <td rowspan="5">1, Ingresar al sitio web <a href="https://www.demoblaze.com/">https://www.demoblaze.com/</a></td>
+                    <td rowspan="6">DBZ-08</td>
+                    <td rowspan="6">La compra no se realiza con éxito cuando únicamente los campos 'Name' y 'Credit Card' del formulario de compra estan llenos correctamente.</td>
+                    <td rowspan="6">1, Ingresar al sitio web <a href="https://www.demoblaze.com/">demoblaze</a></td>
                     <td>1</td>
-                    <td>Hacer clic en un artículo de la tienda (Nexus 6)</td>
-                    <td rowspan="5">El precio del artículo recién añadido se muestra en la tercera columna de la tabla de artículos añadidos al carrito de compra (Price).</td>
-                    <td rowspan="5">Chrome V131, 0,6778,109 64bits</td>
-                    <td rowspan="5">APROBADO</td>
-                    <td rowspan="5">N/A</td>
+                    <td>Hacer clic en el botón 'Cart' en la sección del header del sitio web.</td>
+                    <td rowspan="6">La compra no se realiza con éxito.
+                        Aparece una ventana emergente solicitando llenar el campo 'Name' y la información de la tarjeta ('Credit card', 'Month' y 'Year')</td>
+                    <td rowspan="6">Chrome V131, 0,6778,109 64bits</td>
+                    <td rowspan="6">NO APROBADO</td>
+                    <td rowspan="6"><a href="pdfs/DB-2.pdf" target="_blank">Ver Reporte DB-2</a></td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>Validar que el precio se encuentre visible en la ventana de información del producto ($650)</td>
+                    <td>Validar que el moto total sea el correcto.</td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Hacer clic en el botón 'Add to cart' en la ventana de información del producto.</td>
+                    <td>Hacer clic en el botón 'Place Order'</td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td>Hacer clic en el botón 'Aceptar' de la ventana emergente (www.demoblaze.com dice)</td>
+                    <td>Llenar el campo 'Name' del formulario con información válida.</td>
                 </tr>
                 <tr>
                     <td>5</td>
-                    <td>Hacer clic en el botón 'Cart' en la sección del header del sitio web.</td>
+                    <td>Llenar el campo 'Credit card' del formulario con información válida.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Hacer clic en el botón 'Purchase'</td>
                 </tr>
             </tbody>
         </table>
